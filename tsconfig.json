@@ -11,5 +11,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["**/*.tsx", "**/*.ts"]
+  "include": ["**/*.tsx", "**/*.ts", "src/STLViewerWithAnnotations.jsx"]
 }

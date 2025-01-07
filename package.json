@@ -5,7 +5,9 @@
   "dependencies": {
     "@tryretool/custom-component-support": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.171.0",
+    "vite": "^6.0.5"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -28,7 +30,17 @@
     "@typescript-eslint/parser": "^7.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
-    "prettier": "^3.0.3",
-    "postcss-modules": "^6.0.0"
+    "postcss-modules": "^6.0.0",
+    "prettier": "^3.0.3"
+  },
+  "retoolCustomComponentLibraryConfig": {
+    "name": "Teardrop3DRendering",
+    "label": "Teardrop 3D Rendering",
+    "description": "Components for rendering and annotating .STL and .STP files",
+    "entryPoint": "src/index.tsx",
+    "outputPath": "dist"
+  },
+  "scripts": {
+    "dev": "vite"
   }
 }
