@@ -10,6 +10,16 @@ export const fileViewerSTL: FC = () => {
     label: '.stl URL'
   });
 
+  const [annotations, setAnnotations] = Retool.useStateArray({
+    name: 'annotations',
+    label: 'Annotations'
+  });
+
+  const updateAnnotationsEvent = Retool.useEventCallback({ name: "updateAnnotations" });
+
+  setAnnotations(['initialized']);
+  // updateAnnotationsEvent();
+
   // Example STLs
   // https://raw.githubusercontent.com/Buildbee/example-stl/refs/heads/main/ascii-cube.stl
   // https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/stl/ascii/slotted_disk.stl
@@ -17,7 +27,12 @@ export const fileViewerSTL: FC = () => {
   return (
     <div className="container mx-auto p-4">
       <h3>Displaying: {stlUrl}</h3>
-      <STLViewer url={stlUrl} />
+      <STLViewer 
+        url={stlUrl} 
+        parentAnnotationState={annotations}
+        setParentAnnotations={setAnnotations}
+        updateParentAnnotations={updateAnnotationsEvent}
+      />
     </div>
   );
 }
