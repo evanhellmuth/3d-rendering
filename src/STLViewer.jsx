@@ -39,6 +39,7 @@ const STLViewer = ({ url, parentAnnotationState, setParentAnnotations, updatePar
   // "Save" annotations by sending an event to the parent application
   const saveAnnotations = () => {
     setParentAnnotations(['hardcoded']);
+    
     window.alert(setParentAnnotations);
     // setParentAnnotations(annotations);
   }
